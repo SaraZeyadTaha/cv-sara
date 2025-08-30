@@ -31,9 +31,9 @@ header .continer nav{
     font-family: sans-serif;
 }
 header .continer nav .logo img{
-    width: 80px;
-    height: 80px;
-    margin: 20px 30px;
+    width: 180px;
+    height: 90px;
+    margin: 20px 0px;
     align-items: center;
 }
 header .continer nav .menu ul{
@@ -46,7 +46,6 @@ header .continer nav .menu ul li{
     padding: 0px 25px;
 }
 header .continer nav .menu ul li :hover{
-    border-bottom: 3px solid #ffffff;
     color: #7b3c51;
 }
 header .continer nav .menu ul li a{
@@ -56,6 +55,20 @@ header .continer nav .menu ul li a{
     padding-bottom: 20px;
     
 }
+.hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 30px;
+            color: #7b3c51;
+        }
+.bar {
+     display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #7b3c51;
+    transition: all 0.3s ease;
+        }
 #hero .in{
     display: flex;
     justify-content: space-between;
@@ -64,7 +77,6 @@ header .continer nav .menu ul li a{
     padding-top: 110px;
 }
 #hero .left{
-    text-align: center;
     width: 50%;
     margin-top: 100px;
     line-height: 50px;
@@ -76,9 +88,10 @@ header .continer nav .menu ul li a{
     letter-spacing: 3px;
     font-family: "sara";
     color: #7b3c51;
+    margin-left: 10px;
 
 }
-#hero .left h2{
+#hero .left span{
     letter-spacing: 2px;
     font-size: 20px;
     margin-bottom: 19px;
@@ -176,11 +189,34 @@ header .continer nav .menu ul li a{
     width: 100%;
     background-color: #dcdcdc;
     border-radius: 5px;
+    overflow: hidden;
+}
+    @keyframes small {
+    0%{
+        transform: translateX(-100%);
+    }
+    20%{
+        transform: translateX(-80%);
+    }
+    40%{
+        transform: translateX(-60%);
+    }
+    60%{
+        transform: translateX(-40%);
+    }
+    80%{
+        transform: translateX(-20%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
 }
 #about .in .right .small-div{
     height: 8px;
     background-color:#7b3c51;
     border-radius: 5px;
+    animation: small 2s 1 linear;
+    overflow-x: hidden;
 }
 #exper{
     background-color:#000000 ;
@@ -215,9 +251,11 @@ header .continer nav .menu ul li a{
     width: 50%;
     border-radius: 8px;
 }
+
 #exper .in .right .right-in:hover{
-    background-color: #7b3c51;
-    color: #ffffff;
+     background-color: #7b3c51;
+     color: #ffffff;
+    
 }
 #exper .in .right i{
     font-size: 30px;
@@ -238,29 +276,48 @@ header .continer nav .menu ul li a{
 
 }
 #works .in .right{
-    width: 80%;
-    display: grid;
-    grid-template-areas: 'img1 img1 img1 img1 img1 img1 img1 img1 img1 img1 img1 img1 '
-    ' img3 img3 img3 img3 img4 img4 img4 img4 img5 img5 img5 img5';
-    
-     
+    width: 80%;   
 }
-#works .in .right .one-img{
+.slider {
+  position: relative;
+  width: 140%;
+  max-width: 900px;
+  margin: auto;
+}
+.slider img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+#works button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+button:nth-child(2) { left: 10px; }
+button:nth-child(3) { right: 10px; }
+
+/*#works .in .right .one-img{
     grid-area: img1;
     height: 100%;
     object-fit: cover; 
 }
-#works #right .inner2{
+#works .right .inner2{
     height: 200px;
     object-fit: cover;
     grid-area: img3;
 }
-#works #right .inner3{
+#works .right .inner3{
     height: 200px;
     object-fit: cover;
     grid-area: img4;
 }
-#works #right .inner4{
+#works .right .inner4{
     height: 200px;
     object-fit: cover;
     grid-area: img5;
@@ -270,8 +327,9 @@ header .continer nav .menu ul li a{
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-#works .in .right .inner2:hover{
+}*/
+
+/*#works .in .right .inner2:hover{
     transform: scale(1.7);
 }
 #works .in .right .inner3:hover{
@@ -279,7 +337,7 @@ header .continer nav .menu ul li a{
 }
 #works .in .right .inner4:hover{
     transform: scale(1.7);
-}
+}*/
 #contact{
     background-color: #000000;
 }
@@ -340,7 +398,13 @@ header .continer nav .menu ul li a{
     margin: 10px 20px;
     color:#ffffff;
     outline: none; 
-    border: none; 
+    border: none;
+    box-shadow: 6px 6px 12px #141414,
+                  -6px -6px 12px #2e2e2e;  
+}
+#contact .in .right form input:focus{
+    box-shadow: inset 6px 6px 12px #141414,
+                  inset -6px -6px 12px #2e2e2e;
 }
 #contact .in .right form textarea{
     width: 95%;
@@ -352,6 +416,12 @@ header .continer nav .menu ul li a{
     margin: 10px 20px;
     outline: none;
     border: none; 
+    box-shadow: 6px 6px 12px #141414,
+                  -6px -6px 12px #2e2e2e; 
+}
+#contact .in .right form textarea:focus{
+    box-shadow: inset 6px 6px 12px #141414,
+                  inset -6px -6px 12px #2e2e2e;
 }
 #contact .in .right form button{
     color: #ffffff;
@@ -365,6 +435,8 @@ header .continer nav .menu ul li a{
     height: 40px;
     font-size: 16px;
     letter-spacing: 2px;
+    box-shadow: 6px 6px 12px #141414,
+                  -6px -6px 12px #2e2e2e; 
 }
 #contact .in .right form button:hover{
     background-color:#7b3c51;
@@ -380,4 +452,3 @@ header .continer nav .menu ul li a{
     font-size: 14px;
     padding-top: 7px;
 }
-

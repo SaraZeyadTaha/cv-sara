@@ -1,0 +1,183 @@
+@media (min-width:768px) and (max-width:1023px){
+
+}
+@media(max-width:767px){
+    .hamburger {
+                display: block;
+            }
+            
+            .hamburger.active .bar:nth-child(2) {
+                opacity: 0;
+            }
+            
+            .hamburger.active .bar:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+            
+            .hamburger.active .bar:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+            header .continer nav .menu ul {
+                position: fixed;
+                left: -100%;
+                top: 90px;
+                gap: 80px;
+                flex-direction: column;
+                background-color:  black;
+                width: 100%;
+                height: 100vh;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+                padding: 40px 0;
+            }
+            header .continer nav .menu ul li{
+                border-bottom: 1px solid white;
+                padding-bottom: 20px;
+            }
+            header .continer nav .menu ul li a{
+                font-size: 24px;
+            }
+            header .continer nav .menu ul.active {
+                left: 0;
+            }
+
+
+    #hero .in{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 30px;
+        
+    }
+    #hero .left , #hero .right{
+        text-align: center;
+        width: 100%;
+        height: 50%;
+        margin-top: 20px;
+        
+    }
+    #hero .left p{
+        font-size: 17px;
+    }
+    #hero .left h1, #hero .left h2{
+        font-size: 20px;
+    }
+    #hero .left p{
+        margin-bottom: 15px;
+    }
+    #hero .right img{
+        width: 50%;
+        height: 50% ;
+        margin: 80px auto auto auto ;
+    }
+    #about .in{
+        flex-direction: column;
+    }
+    #about .in .left{
+        text-align: left;
+        width: 100%;
+        font-size: 15px;
+    }
+    #about .in .right{
+        width: 100%;
+        margin-right: 10px;
+        font-size: 14px;
+    }
+    #exper{
+        height: auto;
+    }
+    #exper .in{
+        flex-direction: column;
+        height: auto;
+    }
+    #exper .in .left{
+        text-align: left;
+        width: 100%;
+        margin-bottom: 15px;
+        font-size: 13px;
+    }
+    #exper .in .right{
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+    }
+    @keyframes changeee {
+    20%{
+        transform: translateX(20px);
+    }
+    40%{
+        transform: translateX(-20px);
+    }
+    60%{
+        transform: translateX(-40px);
+    }
+    80%{
+        transform: translateX(40px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+    #exper .in .right .right-in{
+        width: 70%;
+        font-size: 11px;
+        height: auto;
+        animation: changeee 3s infinite linear;
+        margin: auto;
+    }
+    #exper .in .right .right-in:hover{
+        animation: none;
+    }
+    
+    #works .in{
+        flex-direction: column;
+        gap: 20px;
+    }
+    #works .in .left{
+        width: 100%;
+        text-align: left;
+    }
+    #works .in .right{
+        width: 100%;  
+    }
+    .slider{
+        width: 100%;
+    }
+    .slider img{
+        width: 100%;
+        height: 200px;
+    }
+    #contact .in{
+        flex-direction: column;
+        gap: 30px;
+        line-height: 18px;
+    }
+    #contact .in .left{
+        width: 100%;
+        text-align: left;
+    }
+    #contact .in .right{
+        width: 100%;
+    }
+    #contact .in .right form div{
+        flex-direction: column;
+        gap: 10px;
+    }
+    #contact .in .right form input{
+        width: 100%;
+        margin: 10px 0px;
+    }
+    #contact .in .right form textarea{
+        margin: 10px 0px;
+        width: 100%;
+    }
+    #contact .in .right form button{
+        width: 100%;
+        font-size: 12px;
+        margin: 10px 0px;
+    }
+    #contact .in .left p{
+        font-size: 14px;
+    }
+}
